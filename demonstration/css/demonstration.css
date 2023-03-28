@@ -1,0 +1,51 @@
+* {
+	text-decoration: none;
+	font-family: "Open Sans", Calibri, Arial, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	word-break: break-word;
+}
+
+.main-body {
+	display: flex;
+	height: 100vh;
+}
+
+textarea {
+	display: block;
+	width: 50%;
+	overflow-y: scroll;
+}
+
+.print-button {
+	display: flex;
+    position: fixed;
+    background-color: #F96363;
+    border-radius: 3px;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	padding: 10px;
+    align-items: center;
+	font-size: 16px;
+	transition: all 0.5s;
+
+	-webkit-box-shadow: 0px 2px 5px 0px #8F8F8F;
+	-moz-box-shadow: 0px 2px 5px 0px #8F8F8F;
+	box-shadow: 0px 2px 5px 0px #8F8F8F;
+}
+
+.print-button:hover {
+	cursor: pointer;
+	background-color: #B95252;
+	
+	-webkit-box-shadow: 0px 0px 6px 0px #50648C;
+	-moz-box-shadow: 0px 0px 6px 0px #50648C;
+	box-shadow: 0px 0px 6px 0px #50648C;
+}
+
+.printer-img {
+	width: 37px;
+	margin-right: 10px;
+}
