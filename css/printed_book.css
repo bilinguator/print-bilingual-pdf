@@ -1,0 +1,227 @@
+* {
+	text-decoration: none;
+	font-family: "Open Sans", Calibri, Arial, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	word-break: break-word;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+a {
+	color: black;
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 27px;
+	text-align: center;
+	font-weight: 400;
+}
+
+.title h1 {
+	font-size: 45px;
+} 
+
+.author-title-table {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 297mm;
+	width: 230mm;
+	margin: 0 auto;
+}
+
+.author-title-table-row {
+	width: 80%;
+	text-align: center !important;
+	padding: 10px 30px;
+}
+
+.author-title-table-row:first-child {
+	background-color: #ECEFF4;
+}
+
+.author {
+	font-size: 30px;
+}
+
+.title {
+	font-size: 45px;
+}
+
+.left-column {
+	background-color: #ECEFF4;
+	border-color: #ECEFF4;
+}
+
+.right-column img {
+	margin: 0 auto;
+}
+
+.column-img {
+	text-align: center !important;
+}
+
+.column-img-cols-merged {
+	grid-column: 1 / span 2;
+}
+
+.column-img-cols-separate img {
+	width: 100%;
+}
+
+.column {
+	font-size: 16px;
+	padding: 3mm;
+	page-break-inside: avoid;
+	text-align: justify;
+	position: relative;
+	float: none;
+}
+
+.couple {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.column-heading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cover-printed-page {
+	padding: 0mm 0mm !important;
+}
+
+.printed-book-cover {
+	width: 100%;
+	height: 100%;
+}
+
+.printed-page {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 297mm !important;
+	width: 230mm !important;
+	margin: 0 auto;
+	outline: solid 1px;
+	padding: 25mm 0mm;
+}
+
+.printed-book {
+	width: 230mm;
+	margin: 0 auto;
+}
+
+.page-number {
+	font-size: 16px;
+	position: absolute;
+	bottom: 8mm;
+	right: 50%;
+}
+
+.running-title {
+	position: absolute;
+	font-size: 13px;
+	font-weight: 700;
+	color: #9DAEBF !important;
+	left: 20mm;
+	top: 8mm;
+}
+
+.last-printed-page {
+	justify-content: flex-end;
+	padding-left: 20mm;
+}
+
+.last-page-logo-Link {
+	margin-bottom: 10mm;
+	width: 8cm;
+}
+
+.last-page-logo {
+	width: 8cm;
+}
+
+.last-page-year {
+	margin-top: 10mm;
+}
+
+.column-rows {
+	margin: 0mm 20mm;
+}
+
+.column-cols.left-column {
+	margin-left: 20mm;
+}
+
+.column-cols.right-column {
+	margin-right: 20mm;
+}
+
+@page:first {
+	size: portrait;
+}
+
+@media print {
+
+	.printed-page {
+		height: 100vh;
+		width: 100vw;
+		page-break-after: always;
+		page-break-inside: avoid;
+		outline: 0px;
+	}
+}
+
+[lang="ar"],
+[lang="fa"],
+[lang="he"],
+[lang="ug"],
+[lang="ur"],
+[lang="yi"] {
+	direction: rtl;
+	text-align: right;
+}
+
+[lang="ar"],
+[lang="bn"],
+[lang="fa"],
+[lang="hi"],
+[lang="ko"],
+[lang="pa"],
+[lang="ug"],
+[lang="ur"] {
+	font-size: 18px;
+}
+
+[lang="zh"],
+[lang="ja"] {
+	font-size: 25px;
+    font-family: 'SimSun' !important;
+}
+
+[lang="he"],
+[lang="yi"] {
+	font-size: 20px;
+}
+
+[lang="hy"] {
+	font-size: 16px;
+}
