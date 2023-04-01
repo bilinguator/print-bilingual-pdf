@@ -2,7 +2,7 @@
 
 # Print Bilingual PDF
 
-This repository contains JS scripts to open new browser window wherein articles of two aligned source texts are assembled to bilingual document which can be printed into PDF file. The aligned source texts are not just plain texts but have simple and useful specification which can be found [here](https://github.com/bilinguator/bilingual-formats/#source-files-specification).
+This repository contains JS scripts to open new browser window wherein articles of two aligned source texts are assembled to bilingual document which can be printed into PDF file. The aligned source texts are not just plain texts but have simple and useful [specification](#aligned-text-files-specification).
 
 ## Quick start
 
@@ -34,6 +34,10 @@ where `text1`, `text2` - strings containing the full contents of two aligned sou
 `illustrationsFolder` - string containing the location of the book illustrations if they are.
 
 For creating the document with illustrations, move all the illustrations to one directory, name them as natural arabiс numbers like [here](demonstration/img/illustrations). For more details on illustrations in your bilingual books see the [source texts sepcification](https://github.com/bilinguator/bilingual-formats/blob/main/README.md#book-body).
+
+## Aligned text files specification
+
+See aligned texts specification in the [Aligned Texts](https://github.com/bilinguator/aligned-texts#aligned-text-files-specification) repository.
 
 ## Precautions and advices
 
