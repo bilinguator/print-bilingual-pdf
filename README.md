@@ -6,13 +6,13 @@ This repository contains JS scripts to open new browser window wherein articles 
 
 ## Quick start
 
-Add the script tag to your HTML page:
+Put the `print-bilingual-pdf` folder with all the repository contents right to the main folder of your project. Add the script tag to your HTML page:
 
 ```html
-<script type="text/javascript" src="scripts/print_bilingual_pdf.js"></script>
+<script type="text/javascript" src="print-bilingual-pdf/scripts/print_bilingual_pdf.js"></script>
 ```
 
-Specify `src` attribute if the `print_bilingual_pdf.js` script location changed. Make sure that all JS scripts presented in this repository are located in the same folder. Make sure that the `scripts/print_bilingual_pdf.js` script and the `css/printed_book.css` are co-located as presented in this repository, otherwise specify a correct location of the `printed_book.css` in the `print_bilingual_pdf.js`.
+Specify `src` attribute if the `print_bilingual_pdf.js` script location changed. Make sure that all JS scripts presented in this repository are located in the same folder. Make sure that the [`print-bilingual-pdf/scripts/print_bilingual_pdf.js`](scripts/print_bilingual_pdf.js) script and the [`print-bilingual-pdf/css/printed_book.css`](css/printed_book.css) are co-located as presented in this repository, otherwise specify a correct location of the `printed_book.css` in the `print_bilingual_pdf.js`.
 
 When the script is correctly plugged in to your HTML page, use the function:
 

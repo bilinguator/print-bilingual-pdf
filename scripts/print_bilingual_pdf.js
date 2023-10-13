@@ -92,10 +92,10 @@ function printBilingualPDF (text1, text2, lang1, lang2,
 	let printedBookWindow = window.open();
 	printedBookWindow.document.title = fileName;
 	printedBookWindow.document.write(`<title>${fileName}</title>`);
-	printedBookWindow.document.write(`<link rel="stylesheet" type="text/css" href="css\/printed_book.css">`);
+	printedBookWindow.document.write(`<link rel="stylesheet" type="text/css" href="print-bilingual-pdf\/css\/printed_book.css">`);
 	printedBookWindow.document.write(printedBook);
 	
-	printedBookWindow.document.write(`<script type="text\/javascript" src="scripts\/create_element.js"><\/script>`);
-	printedBookWindow.document.write(`<script type="text\/javascript" src="scripts\/print_bilingual_pdf_${mode}.js"><\/script>`);
-	printedBookWindow.document.write(`<script type="text\/javascript" src="scripts\/runnings.js"><\/script>`);
+	printedBookWindow.document.write(`<script type="text\/javascript" src="print-bilingual-pdf\/scripts\/create_element.js"><\/script>`);
+	printedBookWindow.document.write(`<script type="text\/javascript" src="print-bilingual-pdf\/scripts\/print_bilingual_pdf_${mode}.js"><\/script>`);
+	printedBookWindow.document.write(`<script type="text\/javascript" src="print-bilingual-pdf\/scripts\/runnings.js"><\/script>`);
 }
