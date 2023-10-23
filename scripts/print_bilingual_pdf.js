@@ -15,14 +15,14 @@ function createElement (tag, classes) {
 function printBilingualPDF (text1, text2, lang1, lang2,
 	mode = 'cols', cover = '', fileName = 'bilingual_book', illustrationsFolder = '/') {
 	
-	let articlesArrayLeft = text1.split('\n')
-	let articlesArrayRight = text2.split('\n')
+	let paragraphsArrayLeft = text1.split('\n')
+	let paragraphsArrayRight = text2.split('\n')
 	
-	let authorLeft = articlesArrayLeft.shift();
-	let authorRight = articlesArrayRight.shift();
+	let authorLeft = paragraphsArrayLeft.shift();
+	let authorRight = paragraphsArrayRight.shift();
 	
-	let titleLeft = articlesArrayLeft.shift();
-	let titleRight = articlesArrayRight.shift();
+	let titleLeft = paragraphsArrayLeft.shift();
+	let titleRight = paragraphsArrayRight.shift();
 	let titleRestLeft = '';
 	let titleRestRight = '';
 
@@ -56,34 +56,34 @@ function printBilingualPDF (text1, text2, lang1, lang2,
 		printedBook += titleRestRight.split('<delimiter>').join('<br>') + '</div>';
 	}
 
-	let maxArticlesCount = Math.max(articlesArrayLeft.length, articlesArrayRight.length);
+	let maxParagraphsCount = Math.max(paragraphsArrayLeft.length, paragraphsArrayRight.length);
 
-	for (let i = 0; i < maxArticlesCount; i++) {
-		if (articlesArrayLeft[i].includes('<img') && articlesArrayLeft[i] == articlesArrayRight[i]) {
-			let imgIndex = articlesArrayLeft[i].split('<img')[1].split('>')[0];
+	for (let i = 0; i < maxParagraphsCount; i++) {
+		if (paragraphsArrayLeft[i].includes('<img') && paragraphsArrayLeft[i] == paragraphsArrayRight[i]) {
+			let imgIndex = paragraphsArrayLeft[i].split('<img')[1].split('>')[0];
 			printedBook += `<div class="column column-img column-img-${mode}-merged">`;
 			printedBook += `<img src="${illustrationsFolder}/${imgIndex}.png"></div>`;
 		
-		} else if (articlesArrayLeft[i].includes('<img')) {
-			let imgIndex = articlesArrayLeft[i].split('<img')[1].split('>')[0];
+		} else if (paragraphsArrayLeft[i].includes('<img')) {
+			let imgIndex = paragraphsArrayLeft[i].split('<img')[1].split('>')[0];
 			printedBook += `<div class="column column-${mode} left-column column-img column-img-${mode}-separate">`;
 			printedBook += `<img src="${illustrationsFolder}/${imgIndex}.png"></div>`;
 			printedBook += `<div lang="${lang2}" class="column column-${mode} right-column">`;
-			printedBook += articlesArrayRight[i].split('<delimiter>').join('<br>') + '</div>';
+			printedBook += paragraphsArrayRight[i].split('<delimiter>').join('<br>') + '</div>';
 		
-		} else if (articlesArrayRight[i].includes('<img')) {
-			let imgIndex = articlesArrayRight[i].split('<img')[1].split('>')[0];
+		} else if (paragraphsArrayRight[i].includes('<img')) {
+			let imgIndex = paragraphsArrayRight[i].split('<img')[1].split('>')[0];
 			printedBook += `<div lang=${lang1}" class="column column-${mode} left-column">`;
-			printedBook += articlesArrayLeft[i].split('<delimiter>').join('<br>') + '</div>';
+			printedBook += paragraphsArrayLeft[i].split('<delimiter>').join('<br>') + '</div>';
 			printedBook += `<div class="column column-${mode} right-column column-img column-img-${mode}-separate">`;
 			printedBook += `<img src="${illustrationsFolder}/${imgIndex}.png"></div>`;
 		} else {
-			let h1LeftClass = articlesArrayLeft[i].includes('<h1>') ? ' column-heading' : '';
-			let h1RightClass = articlesArrayRight[i].includes('<h1>') ? ' column-heading' : '';
+			let h1LeftClass = paragraphsArrayLeft[i].includes('<h1>') ? ' column-heading' : '';
+			let h1RightClass = paragraphsArrayRight[i].includes('<h1>') ? ' column-heading' : '';
 			printedBook += `<div lang="${lang1}" class="column column-${mode} left-column${h1LeftClass}">`;
-			printedBook += articlesArrayLeft[i].split('<delimiter>').join('<br>') + '</div>';
+			printedBook += paragraphsArrayLeft[i].split('<delimiter>').join('<br>') + '</div>';
 			printedBook += `<div lang="${lang2}" class="column column-${mode} right-column${h1RightClass}">`;
-			printedBook += articlesArrayRight[i].split('<delimiter>').join('<br>') + '</div>';
+			printedBook += paragraphsArrayRight[i].split('<delimiter>').join('<br>') + '</div>';
 		}
 	}
 

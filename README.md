@@ -2,7 +2,7 @@
 
 # Print Bilingual PDF
 
-This repository contains JS scripts to open new browser window wherein articles of two aligned source texts are assembled to bilingual document which can be printed into PDF file. The aligned source texts are not just plain texts but have simple and useful [specification](#aligned-text-files-specification).
+This repository contains JS scripts to open new browser window wherein paragraphs of two aligned source texts are assembled to bilingual document which can be printed into PDF file. The aligned source texts are not just plain texts but have simple and useful [specification](#aligned-text-files-specification).
 
 ## Quick start
 
