@@ -2,20 +2,6 @@ const scriptUrl = document.currentScript.src;
 const projectDir = new URL('..', scriptUrl).href;
 
 
-function createElement (tag, classes) {
-	let newElement = document.createElement(tag);
-	
-	if (Array.isArray(classes)) {
-		classes.forEach((item) => {
-			newElement.classList.add(item);
-		});
-	} else {
-		newElement.classList.add(classes);
-	}
-	
-	return newElement;
-}
-
 function printBilingualPDF (text1, text2, lang1, lang2,
 	mode = 'cols', cover = '', fileName = 'bilingual_book', illustrationsFolder = '/') {
 	
@@ -103,3 +89,4 @@ function printBilingualPDF (text1, text2, lang1, lang2,
 	printedBookWindow.document.write(`<script type="text\/javascript" src="${projectDir}\/scripts\/print_bilingual_pdf_${mode}.js"><\/script>`);
 	printedBookWindow.document.write(`<script type="text\/javascript" src="${projectDir}\/scripts\/runnings.js"><\/script>`);
 }
+
